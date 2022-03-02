@@ -18,7 +18,7 @@ public class ConnectionDB {
 
         try {
             Connection dbConnection = DriverManager.getConnection("jdbc:mysql://localhost:3306/dentaldb", "root", "Moeko2023!");
-
+            System.out.println("Connection OK");
             return dbConnection;
 
         } catch (Exception e) {
