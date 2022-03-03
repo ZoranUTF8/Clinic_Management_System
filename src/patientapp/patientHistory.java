@@ -23,8 +23,9 @@ public class patientHistory extends javax.swing.JFrame {
      */
     public patientHistory() {
         initComponents();
-        setSize(700, 550);
+        setSize(709, 498);
         setLocation(280, 150);
+        pogresanIdBrojLBL.setVisible(false);
     }
 
     /**
@@ -44,8 +45,11 @@ public class patientHistory extends javax.swing.JFrame {
         idBrojTF = new javax.swing.JTextField();
         traziBTN = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        pogresanIdBrojLBL = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         mainTBL.setBorder(javax.swing.BorderFactory.createEtchedBorder(new java.awt.Color(204, 255, 255), new java.awt.Color(153, 153, 153)));
         mainTBL.setModel(new javax.swing.table.DefaultTableModel(
@@ -70,13 +74,19 @@ public class patientHistory extends javax.swing.JFrame {
         mainTBL.setCellSelectionEnabled(true);
         jScrollPane1.setViewportView(mainTBL);
 
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(215, 6, 479, 490));
+
         jLabel1.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
         jLabel1.setText("Istorija korisnika");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 34, 203, -1));
 
         jLabel2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("ID Broj");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 54, 203, -1));
+        getContentPane().add(idBrojTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 77, 203, -1));
 
         traziBTN.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         traziBTN.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dentalswing/images/search.png"))); // NOI18N
@@ -86,6 +96,7 @@ public class patientHistory extends javax.swing.JFrame {
                 traziBTNActionPerformed(evt);
             }
         });
+        getContentPane().add(traziBTN, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 150, 203, -1));
 
         jButton2.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
         jButton2.setText("Izlaz");
@@ -94,47 +105,18 @@ public class patientHistory extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 200, 203, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(idBrojTF)
-                    .addComponent(traziBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(0, 46, Short.MAX_VALUE))
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 479, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(idBrojTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(traziBTN)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton2)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE))
-                .addContainerGap())
-        );
+        pogresanIdBrojLBL.setFont(new java.awt.Font("sansserif", 1, 14)); // NOI18N
+        pogresanIdBrojLBL.setForeground(new java.awt.Color(255, 51, 51));
+        pogresanIdBrojLBL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pogresanIdBrojLBL.setText("Provjerite ID broj");
+        pogresanIdBrojLBL.setToolTipText("Korisnik nije unesen u bazi");
+        getContentPane().add(pogresanIdBrojLBL, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 116, 203, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/dentalswing/images/add new patient background.jpg"))); // NOI18N
+        jLabel4.setText("jLabel4");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -149,25 +131,32 @@ public class patientHistory extends javax.swing.JFrame {
         String idBroj = idBrojTF.getText();
 
         if (idBroj.isEmpty()) {
-            
+
             System.err.println("Input cannot be empty");
             JOptionPane.showMessageDialog(null, "Provjerite svoj unos. Polja ne mogu da budu prazna.", "Select", JOptionPane.OK_OPTION);
-            
+
         } else {
-            
-//            Display data in table
+
+ //            Display data in table
             try (Connection dbConnection = ConnectionDB.getConn()) {
 
                 Statement st = dbConnection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 
-                String query = "SELECT * FROM dentaldb.pacijentpregled WHERE idpacijentpregled="+idBroj;
+                String query = "SELECT * FROM dentaldb.pacijentpregled WHERE idpacijentpregled=" + idBroj;
 
-//            Get patient from DB
+//                  Get patient from DB
                 ResultSet rs = st.executeQuery(query);
-//          
-//             add rs2xml.jar to populate table
+
+//                add rs2xml.jar to populate table
                 mainTBL.setModel(DbUtils.resultSetToTableModel(rs));
 
+                if (!rs.first()) {
+                    pogresanIdBrojLBL.setVisible(true);
+                    idBrojTF.setText("");
+                } else {
+                    pogresanIdBrojLBL.setVisible(false);
+                }
+//             
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Connection error in: " + getClass());
             }
@@ -215,9 +204,11 @@ public class patientHistory extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTable mainTBL;
+    private javax.swing.JLabel pogresanIdBrojLBL;
     private javax.swing.JButton traziBTN;
     // End of variables declaration//GEN-END:variables
 }

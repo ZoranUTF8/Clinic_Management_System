@@ -115,7 +115,7 @@ public class addNewPatient extends javax.swing.JFrame {
 
         PolCB.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
         PolCB.setForeground(new java.awt.Color(0, 0, 0));
-        PolCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Musko", "Zensko", "Ostalo" }));
+        PolCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Muski", "Zenski", "Ostali" }));
         getContentPane().add(PolCB, new org.netbeans.lib.awtextra.AbsoluteConstraints(227, 287, 234, -1));
 
         KrvnaGrupaCB.setFont(new java.awt.Font("sansserif", 1, 18)); // NOI18N
